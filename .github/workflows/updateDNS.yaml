@@ -1,0 +1,21 @@
+name: "Update DNS Records"
+
+on:
+  push:
+    branches:
+      - master
+      # this is to prevent the workflow from running on PRs and other branches, which is important for security reasons
+
+jobs:
+  updateRecords:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '17.7.1'
+    - run: wget https://github.com/StackExchange/dnscontrol/releases/download/v3.15.0/dnscontrol-Linux
+    # save credential env var to file
+    - run: echo $CREDS > creds.json
+    - run: dnscontrol update
+    - run: dnscontrol push
