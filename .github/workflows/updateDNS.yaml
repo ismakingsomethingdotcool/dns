@@ -11,12 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '17.7.1'
     - run: wget https://github.com/StackExchange/dnscontrol/releases/download/v3.15.0/dnscontrol-Linux
     - run: chmod +x dnscontrol-Linux
     - run: ./dnscontrol-Linux preview
+      env:
+        PACKETFRAME_TOKEN: ${{ secrets.PACKETFRAME_TOKEN }}
     - run: ./dnscontrol-Linux push
       env:
         PACKETFRAME_TOKEN: ${{ secrets.PACKETFRAME_TOKEN }}
