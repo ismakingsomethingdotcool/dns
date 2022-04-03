@@ -15,6 +15,7 @@ jobs:
       with:
         node-version: '17.7.1'
     - run: wget https://github.com/StackExchange/dnscontrol/releases/download/v3.15.0/dnscontrol-Linux
+    - run: chmod +x dnscontrol-Linux
     # save credential env var to file
     - run: echo $CREDS > creds.json
     - run: ./dnscontrol-Linux update
