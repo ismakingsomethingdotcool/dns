@@ -17,5 +17,5 @@ jobs:
     - run: wget https://github.com/StackExchange/dnscontrol/releases/download/v3.15.0/dnscontrol-Linux
     # save credential env var to file
     - run: echo $CREDS > creds.json
-    - run: dnscontrol update
-    - run: dnscontrol push
+    - run: ./dnscontrol-Linux update
+    - run: ./dnscontrol-Linux push
