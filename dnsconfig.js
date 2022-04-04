@@ -4,7 +4,8 @@ var PACKETFRAME = NewDnsProvider('packetframe', 'PACKETFRAME');
 D(
   'ismakingsomething.cool',
   REG_NONE,
-  DnsProvider(PACKETFRAME)
+  DnsProvider(PACKETFRAME),
+  CNAME('www','ismakingsomethingdotcool.pages.dev')
 );
 
 require('./entries.js')
