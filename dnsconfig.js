@@ -5,7 +5,7 @@ D(
   'ismakingsomething.cool',
   REG_NONE,
   DnsProvider(PACKETFRAME),
-  CNAME('www','ismakingsomethingdotcool.pages.dev')
+  CNAME('www','ismakingsomethingdotcool.pages.dev.')
 );
 
 require('./entries.js')
