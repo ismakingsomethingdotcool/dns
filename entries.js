@@ -3,7 +3,7 @@ D_EXTEND(
   NS('kagl','ns1.kagl.me.'),
   NS('kagl','ns2.kagl.me.'),
   NS('tnix','ns0.1984.is.'),
-  NS('tnix'.'ns1.1984hosting.com.'),
+  NS('tnix','ns1.1984hosting.com.'),
   NS('tnix','ns1.1984.is.'),
   NS('tnix','ns2.1984.is.'),
   NS('tnix','ns2.1984hosting.com.')
