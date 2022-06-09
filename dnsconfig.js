@@ -5,8 +5,8 @@ D(
   'ismakingsomething.cool',
   REG_NONE,
   DnsProvider(PACKETFRAME),
-  A('@','89.41.169.49'),
-  AAAA('@','2a01:7c8:e001:1a::6ab2'),
+  A('@','89.106.200.1'),
+  AAAA('@','2a12:5240::1'),
   CNAME('www','ismakingsomethingdotcool.pages.dev.')
 );
 
